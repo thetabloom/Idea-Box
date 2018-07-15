@@ -1,8 +1,46 @@
+/*Idea Styles*/
+
+section {
+  display: wrap;
+  width: 100%;
+  justify-content: center;
+
+}
+
+section .idea-section {
+  font-family: 'Open Sans', sans-serif;
+  width: 50%;
+}
+
+.title-line-parent-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  color: #6D6E71;
+}
+
+p .idea-body {
+  color: #939598;
+}
+
+.quality-line-parent-container {
+  display: flex;
+  justify-content: flex-start;
+  color: 6d6e71;
+}
+
+br {
+  color: D1D3D4;
+}
+
 main {
 font-family: 'Roboto Slab', serif;
 font-family: 'Open Sans', sans-serif;
 margin: 0 auto;
 }
+
 /*change roboto to Roboto slab bold 700*/
 
 body {
@@ -89,6 +127,4 @@ input {
 }
 /*
 how do i style a placeholder to light grey*/
-
-
 
