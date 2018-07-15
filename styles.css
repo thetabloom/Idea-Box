@@ -1,4 +1,67 @@
-/*Idea Styles*/
+
+
+main {
+font-family: 'Roboto Slab', serif;
+font-family: 'Open Sans', sans-serif;
+margin: 0 auto;
+}
+
+body {
+  font-family: Open Sans;
+  width: 100%;
+}
+
+.input-section {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: 
+  background-color: #E5F3F2;
+  height: 23rem;
+  width: 100%;
+  padding: 1.5em 0 .1em 0;
+}
+
+h1 {
+  color: #00A79D;
+  font-family: Roboto Slab;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+span {
+  color: #6D6E71;
+}
+
+.save-button {
+  background-color: #00A79D;
+  font-size: 2rem;
+  font-color: lightgrey;
+  padding-bottom: .5rem;
+  color: #FFFFFF;
+  width: 20rem;
+}
+
+.save-button:hover {
+  background-color: #045E55;
+}
+
+input {
+  /*font-size: 2em;*/
+  outline: none;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  font-size: 2rem;
+}
+
+/*Idea Styles Sara*/
 
 section {
   display: wrap;
@@ -28,103 +91,11 @@ p .idea-body {
 .quality-line-parent-container {
   display: flex;
   justify-content: flex-start;
-  color: 6d6e71;
+  color: #6d6e71;
 }
 
 br {
-  color: D1D3D4;
+  color: #D1D3D4;
 }
 
-main {
-font-family: 'Roboto Slab', serif;
-font-family: 'Open Sans', sans-serif;
-margin: 0 auto;
-}
-
-/*change roboto to Roboto slab bold 700*/
-
-body {
-  font-family: Open Sans;
-}
-
-.input-section {
-  background-color: #E5F3F2;
-  height: 23em;
-  width: 100%;
-  padding: 1.5em 0 .1em 0;
-
-}
-
-h1 {
-  border: 2px solid black;
-  color: #00A79D;
-  font-family: Roboto Slab;
-  font-size: 4em;
-  text-align: center;
-  margin: .3em .1em .5em 0;
-}
-
-span {
-  color: #6D6E71;
-}
-
-.save-button {
-  border: 2px solid black;
-  background-color: #00A79D; 
-  max-width: 50em;
-  width: 50em;
-  color: #FFFFFF;
-  margin: 1.5em 0 5em 39em;
-  display: block;
-  box-sizing: border-box;
-  height: 4em;
-  outline: none;
-  
-}
-
-/*how do I keep the changed font size in 
-my save button and reduce padding
-i tried using position relative to detach
-it from the text but that didn't seem to 
-work, this may change as i have worked on 
-the sizing now but since the .save text is
-is a seperate div for styling it has
-detached from the button if i take off the 
-.save styling it wonks up the whole page*/
-
-.save-button:hover {
-  background-color: #045E55;
-}
-
-.save {
-  font-size: 2.5em;
-  border: 2px solid red;
-  /*position: relative;
-  z-index: 1;*/
-
-  
-}
-
-input {
-  font-size: 2em;
-  outline: none;
-  border: 2px solid lightgrey;
-}
-.input-title {
-  color: lightgrey;
-  display: block;
-  margin: 0 0 1em 13.4em;
-  padding: .1em;
-  width: 16.8em;
-}
-
-.input-body {
-  color: lightgrey;
-  display: block;
-  padding: .1em;
-  width: 16.8em;
-  margin: 0 0 1em 13.4em;
-}
-/*
-how do i style a placeholder to light grey*/
 
