@@ -1,7 +1,3 @@
-/*font-family: 'Roboto', sans-serif;
-font-family: 'Open Sans', sans-serif;
-*/
-
 /*Idea Styles*/
 
 section {
@@ -38,3 +34,79 @@ p .idea-body {
 br {
   color: D1D3D4;
 }
+
+main {
+font-family: 'Roboto Slab', serif;
+font-family: 'Open Sans', sans-serif;
+margin: 0 auto;
+}
+
+/*change roboto to Roboto slab bold 700*/
+
+body {
+  font-family: Open Sans;
+}
+
+.input-section {
+  background-color: #E5F3F2;
+  height: 23em;
+  padding: 1.5em 0 .1em 0;
+
+}
+
+h1 {
+  color: #00A79D;
+  font-family: Roboto Slab;
+  font-size: 4em;
+  text-align: center;
+  margin: .3em 0 .5em 0;
+}
+
+span {
+  color: #6D6E71;
+}
+
+.save-button {
+  background-color: #00A79D; 
+  max-width: 50em;
+  width: 50em;
+  color: #FFFFFF;
+  margin: 1.5em 0 5em 39em;
+  display: block;
+  position: relative;
+}
+/*how do i change font size on my save button*/
+
+.save-button:hover {
+  background-color: #045E55;
+}
+
+.save {
+  font-size: 2.5em;
+  padding: .01em;
+ /* position: relative;*/
+}
+
+input {
+  font-size: 2em;
+  outline: none;
+  border: 2px solid lightgrey;
+}
+.input-title {
+  color: lightgrey;
+  display: block;
+  margin: 0 0 1em 13.4em;
+  padding: .1em;
+  width: 16.8em;
+}
+
+.input-body {
+  color: lightgrey;
+  display: block;
+  padding: .1em;
+  width: 16.8em;
+  margin: 0 0 1em 13.4em;
+}
+/*
+how do i style a placeholder to light grey*/
+
