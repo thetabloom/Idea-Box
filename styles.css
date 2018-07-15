@@ -50,16 +50,18 @@ body {
 .input-section {
   background-color: #E5F3F2;
   height: 23em;
+  width: 100%;
   padding: 1.5em 0 .1em 0;
 
 }
 
 h1 {
+  border: 2px solid black;
   color: #00A79D;
   font-family: Roboto Slab;
   font-size: 4em;
   text-align: center;
-  margin: .3em 0 .5em 0;
+  margin: .3em .1em .5em 0;
 }
 
 span {
@@ -67,15 +69,28 @@ span {
 }
 
 .save-button {
+  border: 2px solid black;
   background-color: #00A79D; 
   max-width: 50em;
   width: 50em;
   color: #FFFFFF;
   margin: 1.5em 0 5em 39em;
   display: block;
-  position: relative;
+  box-sizing: border-box;
+  height: 4em;
+  outline: none;
+  
 }
-/*how do i change font size on my save button*/
+
+/*how do I keep the changed font size in 
+my save button and reduce padding
+i tried using position relative to detach
+it from the text but that didn't seem to 
+work, this may change as i have worked on 
+the sizing now but since the .save text is
+is a seperate div for styling it has
+detached from the button if i take off the 
+.save styling it wonks up the whole page*/
 
 .save-button:hover {
   background-color: #045E55;
@@ -83,8 +98,11 @@ span {
 
 .save {
   font-size: 2.5em;
-  padding: .01em;
- /* position: relative;*/
+  border: 2px solid red;
+  /*position: relative;
+  z-index: 1;*/
+
+  
 }
 
 input {
