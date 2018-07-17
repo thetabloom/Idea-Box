@@ -7,59 +7,68 @@ margin: 0 auto;
 body {
   font-family: Open Sans;
   width: 100%;
+  height: 100vh;
 }
 
-.input-section {
-  border: 1px solid black;
+section.input-section {
+  background-color: #E5F3F2;
+  height: 45%;
   display: flex;
   justify-content: center;
-  align-items: 
-  background-color: #E5F3F2;
-  height: 23rem;
-  padding: 1.5em 0 .1em 0;
+  align-items: center;
+  /*align-items: stretch;*/
+  /*padding: 1.5em 0 .1em 0;*/
 }
 
-h1 {
-  color: #00A79D;
-  font-family: Roboto Slab;
-  font-size: 4rem;
-  text-align: center;
-}
-
-.test{
+form {
   display: flex;
+  /*display: flex;*/
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
 }
 
-span {
-  color: #6D6E71;
-}
+/*h1 {
+  color: #00A79D;
+  font-family: Roboto Slab;
+  font-size: 4rem;
+  text-align: center;
+}*/
 
-.save-button {
+/*.test{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
+
+/*span {
+  color: #6D6E71;
+}*/
+
+/*.save-button {
   background-color: #00A79D;
   font-size: 2rem;
   font-color: lightgrey;
   padding-bottom: .5rem;
   color: #FFFFFF;
   width: 20rem;
-}
+}*/
 
-.save-button:hover {
+./*save-button:hover {
   background-color: #045E55;
-}
+}*/
 
-input {
-  /*font-size: 2em;*/
+/*input {*/
+  /*font-size: 2em;
   outline: none;
   border: 2px solid lightgrey;
   color: lightgrey;
   font-size: 2rem;
-}
+}*/
 
 /*Idea Styles Sara*/
 
-section {
+/*section {
   display: wrap;
   width: 100%;
   justify-content: center;
@@ -95,3 +104,4 @@ br {
 }
 
 
+*/
