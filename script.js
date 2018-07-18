@@ -6,10 +6,16 @@ var saveButton = document.querySelector('.save-button');
 var searchInput = document.querySelector('.search');
 var cardsLiveHere = document.querySelector('.cards-live-here');
 var ideasArray = JSON.parse(localStorage.getItem('ideasArray')) || [];
+var deleteButton = document.querySelector('.delete-button');
+// var upButton = document.querySelector('up-button');
+// var downButton = document.querySelector('down-button');
 
 // event listeners
 
 saveButton.addEventListener('click', saveIdea);
+// // deleteButton.addEventListener('click', deleteIdea);
+// upButton.addEventListener('click', changeQuality);
+// downButton.addEventListener('click', changeQuality);
 
 // constructor functions
 
@@ -21,6 +27,33 @@ function Idea(id, title, body) {
 }
 
 // functions
+
+function clearInputs() {
+  inputTitle.value = '';
+  inputBody.value = '';
+};
+
+// will  need a function that
+// clears search box and restores all ideas
+// to the list. 
+// function clearSearch() {
+//   searchInput.value = '';
+// };
+
+// will need function that deletes idea upon event happening
+// page should not reload when idea is deleted
+// idea should also be removed from local storage
+// function deleteIdea() {
+
+// };
+
+// will need function that changes quality, update HTML for interaction
+// button should change qulity when button is pressed, it should also
+// change quality in the array according to user input, maybe consider
+// if/or as way to do this, will likely need event listeners on arrows
+// function changeQuality() {
+
+// }
 
 function saveIdea(event) {
   event.preventDefault();
@@ -44,4 +77,9 @@ function saveIdea(event) {
   cardsLiveHere.prepend(newLi);
   clearInputs();
 };
+
+// will eventually need a function that searches
+// ideas to filter and display ideas whose title
+// or body include the user's text... page should
+// not reload
 
