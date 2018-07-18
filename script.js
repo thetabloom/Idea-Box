@@ -54,7 +54,6 @@ function clearInputs() {
 // if/or as way to do this, will likely need event listeners on arrows
 // function changeQuality() {
 
-// }
 
 function saveIdea(event) {
   event.preventDefault();
@@ -64,37 +63,37 @@ function saveIdea(event) {
   var newIdea = new Idea(Date.now(), title, body);
   ideasArray.push(newIdea);
   localStorage.setItem('ideasArray', JSON.stringify(ideasArray));
-  newP.innerHTML = `<div class="title-line-parent-container">
-        <h3>${title}</h3>
-        <button class="delete-X">X</button>
-      </div>
+  newP.innerHTML = `<section class="title-line-parent-container">
+        <p class="title-of-idea">${title}</p>
+        <button class="delete-button"></button>
+      </section>
       <p class="idea-body">${body}</p>
-      <div class="quality-line-parent-container">
-        <button class="up-button">Up Arrow</button>
-        <button class="down-button">Down Arrow</button>
+      <section class="quality-line-parent-container">
+        <button class="up-button"></button>
+        <button class="down-button"></button>
         <p class="idea-quality">Quality</p>
-        <br>
-      </div>`
+      </section>
+      <hr>
+      </section>`
   cardsLiveHere.prepend(newP);
   clearInputs();
 };
 
 function retrieveIdeas(event) {
-  // debugger;
   ideasArray.forEach(function(element) {
   var newP = document.createElement('p');
-  newP.innerHTML = `<div class="title-line-parent-container">
-        <h3>${element.title}</h3>
-        <button class="delete-X">X</button>
-      </div>
+  newP.innerHTML = `<section class="title-line-parent-container">
+        <p class="title-of-idea">${element.title}</p>
+        <button class="delete-button"></button>
+      </section>
       <p class="idea-body">${element.body}</p>
-      <div class="quality-line-parent-container">
-        <button class="up-button">Up Arrow</button>
-        <button class="down-button">Down Arrow</button>
+      <section class="quality-line-parent-container">
+        <button class="up-button"></button>
+        <button class="down-button"></button>
         <p class="idea-quality">Quality</p>
-        <br>
-      </div>`;
-      console.log(element.title);
+      </section>
+      <hr>
+      </section>`
       cardsLiveHere.prepend(newP);
   });
 }
