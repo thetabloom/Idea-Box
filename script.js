@@ -13,6 +13,7 @@ var deleteButton = document.querySelector('.delete-button');
 // event listeners
 
 saveButton.addEventListener('click', saveIdea);
+$(document).ready(retrieveIdeas);
 // // deleteButton.addEventListener('click', deleteIdea);
 // upButton.addEventListener('click', changeQuality);
 // downButton.addEventListener('click', changeQuality);
@@ -59,11 +60,11 @@ function saveIdea(event) {
   event.preventDefault();
   var title = inputTitle.value;
   var body = inputBody.value;
-  var newLi = document.createElement('li');
+  var newP = document.createElement('p');
   var newIdea = new Idea(Date.now(), title, body);
   ideasArray.push(newIdea);
   localStorage.setItem('ideasArray', JSON.stringify(ideasArray));
-  newLi.innerHTML = `<div class="title-line-parent-container">
+  newP.innerHTML = `<div class="title-line-parent-container">
         <h3>${title}</h3>
         <button class="delete-X">X</button>
       </div>
@@ -74,9 +75,29 @@ function saveIdea(event) {
         <p class="idea-quality">Quality</p>
         <br>
       </div>`
-  cardsLiveHere.prepend(newLi);
+  cardsLiveHere.prepend(newP);
   clearInputs();
 };
+
+function retrieveIdeas(event) {
+  // debugger;
+  ideasArray.forEach(function(element) {
+  var newP = document.createElement('p');
+  newP.innerHTML = `<div class="title-line-parent-container">
+        <h3>${element.title}</h3>
+        <button class="delete-X">X</button>
+      </div>
+      <p class="idea-body">${element.body}</p>
+      <div class="quality-line-parent-container">
+        <button class="up-button">Up Arrow</button>
+        <button class="down-button">Down Arrow</button>
+        <p class="idea-quality">Quality</p>
+        <br>
+      </div>`;
+      console.log(element.title);
+      cardsLiveHere.prepend(newP);
+  });
+}
 
 // will eventually need a function that searches
 // ideas to filter and display ideas whose title

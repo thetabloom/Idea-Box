@@ -89,35 +89,37 @@ input.search {
   /*Why is this different than above*/
 }
 
-ul {
+article {
   list-style: none;
   width: 55%;
 }
 
-li {
+p.insert-idea {
  list-style-position: none;
  border: solid magenta 2px;
  width: 100%;
 }
 
-/*.title-line-parent-container {
+.title-line-parent-container {
   display: flex;
   align-items: flex-start;
-}*/
+}
 
 h3 {
+  align-content: left;
   color: #6D6E71;
 }
 
-p .idea-body {
+p.idea-body {
   color: #939598;
+  width: 80%;
 }
 
-/*.quality-line-parent-container {
+.quality-line-parent-container {
   display: flex;
   justify-content: flex-start;
-  color: #6d6e71;
-}*/
+  /*color: #6d6e71;*/
+}
 
 br {
   color: #D1D3D4;
