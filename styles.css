@@ -119,9 +119,12 @@ p.title-of-idea {
 
 p.idea-body {
   color: #939598;
-  width: 100%;
+  max-width: 100%;
   font: 2rem;
   margin: 1rem 0;
+  overflow-x: scroll;
+  height: 6rem;
+  word-wrap: break-word;
 }
 
 .quality-line-parent-container {

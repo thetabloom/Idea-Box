@@ -20,11 +20,11 @@ $(document).ready(retrieveIdeas);
 
 // constructor functions
 
-function Idea(id, title, body) {
+function Idea(id, title, body, quality = 'swill') {
   this.id = id;
   this.title = title;
   this.body = body;
-  this.quality = 'swill';
+  this.quality = quality;
 }
 
 // functions
@@ -59,42 +59,16 @@ function saveIdea(event) {
   event.preventDefault();
   var title = inputTitle.value;
   var body = inputBody.value;
-  var newP = document.createElement('p');
   var newIdea = new Idea(Date.now(), title, body);
   ideasArray.push(newIdea);
   localStorage.setItem('ideasArray', JSON.stringify(ideasArray));
-  newP.innerHTML = `<section class="title-line-parent-container">
-        <p class="title-of-idea">${title}</p>
-        <button class="delete-button"></button>
-      </section>
-      <p class="idea-body">${body}</p>
-      <section class="quality-line-parent-container">
-        <button class="up-button"></button>
-        <button class="down-button"></button>
-        <p class="idea-quality">Quality</p>
-      </section>
-      <hr>
-      </section>`
-  cardsLiveHere.prepend(newP);
+  createIdeaCard(newIdea);
   clearInputs();
 };
 
-function retrieveIdeas(event) {
+function retrieveIdeas() {
   ideasArray.forEach(function(element) {
-  var newP = document.createElement('p');
-  newP.innerHTML = `<section class="title-line-parent-container">
-        <p class="title-of-idea">${element.title}</p>
-        <button class="delete-button"></button>
-      </section>
-      <p class="idea-body">${element.body}</p>
-      <section class="quality-line-parent-container">
-        <button class="up-button"></button>
-        <button class="down-button"></button>
-        <p class="idea-quality">Quality</p>
-      </section>
-      <hr>
-      </section>`
-      cardsLiveHere.prepend(newP);
+    createIdeaCard(element);
   });
 }
 
@@ -103,3 +77,20 @@ function retrieveIdeas(event) {
 // or body include the user's text... page should
 // not reload
 
+
+function createIdeaCard(idea) {
+  var newP = document.createElement('p');
+  newP.innerHTML = `<section class="title-line-parent-container">
+        <p class="title-of-idea">${idea.title}</p>
+        <button class="delete-button"></button>
+      </section>
+      <p class="idea-body">${idea.body}</p>
+      <section class="quality-line-parent-container">
+        <button class="up-button"></button>
+        <button class="down-button"></button>
+        <p class="idea-quality">${idea.quality}</p>
+      </section>
+      <hr>
+      </section>`;
+      cardsLiveHere.prepend(newP);
+}
