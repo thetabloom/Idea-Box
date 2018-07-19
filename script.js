@@ -49,8 +49,11 @@ function clearInputs() {
 //     event.target.parentElement.parentElement.parentElement.parentElement.remove();
 
 function deleteIdea(event) {
+  
   if (event.target.classList.contains('delete-button')) {
     event.target.parentElement.parentElement.remove();
+    var ideaId = $(this).closest('.populated-ideas').attr('id');
+    localStorage.removeItem(ideasArray);
   }
 };
 
