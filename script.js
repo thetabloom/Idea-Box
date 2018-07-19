@@ -14,7 +14,7 @@ var deleteButton = document.querySelector('.delete-button');
 
 saveButton.addEventListener('click', saveIdea);
 $(document).ready(retrieveIdeas);
-// // deleteButton.addEventListener('click', deleteIdea);
+cardsLiveHere.addEventListener('click', deleteIdea);
 // upButton.addEventListener('click', changeQuality);
 // downButton.addEventListener('click', changeQuality);
 
@@ -44,9 +44,15 @@ function clearInputs() {
 // will need function that deletes idea upon event happening
 // page should not reload when idea is deleted
 // idea should also be removed from local storage
-// function deleteIdea() {
+// unction removeBookmark(event) {
+//   if (event.target.classList.contains('delete-btn')) {
+//     event.target.parentElement.parentElement.parentElement.parentElement.remove();
 
-// };
+function deleteIdea(event) {
+  if (event.target.classList.contains('delete-button')) {
+    event.target.parentElement.parentElement.remove();
+  }
+};
 
 // will need function that changes quality, update HTML for interaction
 // button should change qulity when button is pressed, it should also
